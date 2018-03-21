@@ -1,9 +1,17 @@
 /* Site Specific Customization Here */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,600italic%7COpen+Sans+Condensed:300,700');
 
+body, p, span,
+div, ul, ol, li, label, textarea, th, td, a {
+  font-family: "Source Sans Pro",sans-serif;
+}
+a:link, a:visited {
+    color: #005c96;
+}
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans Condensed', sans-serif;
+    font-family: "Source Sans Pro",sans-serif;
+    letter-spacing: unset;
 }
 
 h1 {
@@ -11,9 +19,14 @@ h1 {
   border-bottom-color: #d1d1d1;
 }
 
-
 form.f-wrap-request label .field {
   color: #565656;
+  font-size: 15px;
+}
+form.f-wrap-1 label .field .note,
+form.f-wrap-request label .field .note {
+  font-size: 92%;
+  color: #666;
 }
 
 #header {
@@ -22,34 +35,40 @@ form.f-wrap-request label .field {
   border-top: solid #1d4267 4px;
 }
 
-a.logonLink:link {
-  color: #1d4267;
-  border-bottom: 1px dotted #999;
+a.logonLink:link, a.logonLink:visited {
+    color: #005c96;
+    border-bottom: 1px dotted #999;
+    font-size: 94%;
 }
 
 a.logonLink:hover {
   color: #2972bb;
   border-bottom: 1px solid #2972bb;
 }
+#nav ul li.active:nth-of-type(2) {
+    margin-bottom: 20px;
+}
 #nav ul li h3 {
   border-bottom-color: #d1d1d1;
-}
-
-#nav ul li h3 a, #nav ul li h3 {
   color: #1d4267;
-  font-size: 16px;
+  font-size: 1.2em;
 }
 
-#nav ul ul li, #nav ul ul li a {
-  font-size: 14px;
-  color: #1d4267;
+#nav ul li h3 a, #nav ul ul li, #nav ul ul li a {
+  color: #005c96;
 }
 
-#nav ul li h3 a:hover, #nav ul ul li:hover, #nav ul ul li a:hover {
+#nav ul li h3 a:hover, 
+#nav ul ul li:hover, 
+#nav ul ul li a:hover,
+#nav ul li a:hover {
   text-decoration: underline;
   color: #2972bb;
 }
 
+fieldset#searchType {
+    padding: 0;
+}
 ul.breadcrumb {
   background-color: #1d4267;
 }
@@ -62,20 +81,56 @@ ul.breadcrumb {
 .default-table thead tr.row-headings th {
   font-weight: bold;
 }
+.default-table thead th {
+    font-weight:600;
+    font-size: 1.3em;
+    padding: 10px 5px;
+    letter-spacing: unset;
+}
+.default-table tbody td {
+    font-size: 1.3em;
+}
 
 form.f-wrap-request h3 {
   color: #2972bb;
 }
 
+form h3 {
+    color: #565656;
+    font-weight: bold;
+    font-size: 150%;
+    letter-spacing: 0px;
+}
+
 input.f-submit {
-  color: #2972bb;
-  border: #2972bb solid 3px;
-  padding: 3px;
+    color: #ffffff;
+    background: #337ab7;
+    padding: 10px 22px;
+    border: 0;
+    font-size: 14px;
+    margin: 14px 0px 15px 5px;
 }
 
 input.f-submit:hover {
   color: #fff;
-  background-color: #2972bb;
+  background-color: #345b8a;
+}
+
+form.f-wrap-request label input,
+form.f-wrap-request label select {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: unset;
+}
+
+#status {
+    margin: 20px auto;
+}
+#status-request {
+    font-family: "Source Sans Pro",sans-serif;
+    color: #333333;
+    margin: 20px auto;
+    line-height: 20px;
 }
 
 #transactionMenu a:link, #transaction Menu a:visited {
@@ -92,7 +147,20 @@ input.f-submit:hover {
 #header-logo a img{
   height: 55px;
 }
+#logonform ul {margin: 0 0 0 45px;}
+
+#footer p {
+    line-height: 20px;
+}
+#footer p span {
+    margin: 0 8px;
+    color: #ccc;
+    font-size: 12px;
+    vertical-align: 1px;
+}
 
 form.f-wrap-1 label .field {
-  width: 12em;
+    width: 12em;
+    font-size: 108%;
 }
+
