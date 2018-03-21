@@ -1,0 +1,10 @@
+/* Site Specific Customization Here */
+@media only screen and (max-width: 480px) {
+    body {
+        width: 100%;
+    }
+    #header-logo a img {
+        height: auto;
+        width: 90%;
+    }
+}

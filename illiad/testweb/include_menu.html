@@ -1,0 +1,52 @@
+<div id="utility">
+    <div id="nav">
+        <ul>
+            <li class="active"><h3><a href="<#ACTION action="99">">Logoff <#PARAM name="Username"></a></h3></li>
+            <li class="active"><h3><a href="<#ACTION action="10" form="10">">Main Menu</a></h3></li>
+            <li><h3>Place New Requests</h3></li>
+            <ul>
+                <li><a href="<#ACTION action="10" form="22">">Article</a></li>
+                <li class="first"><a href="<#ACTION action="10" form="21">">Book</a></li>
+                <li><a href="<#ACTION action="10" form="23">">Book Chapter</a></li>
+                <li><a href="<#ACTION action="10" form="20" value="GenericRequestAVLoan">">A/V Loan</a></li>
+            </ul>
+
+            <li><h3>View Existing Requests</h3></li>
+            <ul>
+                <li class="first"><a href="<#ACTION action="10" form="62">">Pending Requests</a></li>
+                <li><a href="<#ACTION action="10" form="64">">Article/Book Chapter</a></li>
+                <li><a href="<#ACTION action="10" form="66">">Checked Out Items</a></li>
+                <li><a href="<#ACTION action="10" form="70">">Cancelled Requests</a></li>
+                <li><a href="<#ACTION action="10" form="68">">History Requests</a></li>
+                <li><a href="<#ACTION action="10" form="60">">All Requests</a></li>
+                <li class="last"><a href="<#ACTION action="10" form="73">">E-Mail Notifications</a></li>
+            </ul>
+
+            <li><h3>Tools</h3></li>
+            <ul>
+                <li class="first"><a href="<#ACTION action="10" form="81"/>">Manage Your Account</a></li>
+                <li><a href="https://vufind.carli.illinois.edu/vf-dpu/MyResearch/Home">Login to IShare Account</a></li>
+            </ul>
+
+            <li><h3>Search</h3>
+                <div id="search">
+                    <form class="form-wrapper" action="illiad.dll" name="Search" method="post">
+                        <input type="hidden" name="IlliadForm" value="Search" />
+                        <input id="SessionID" name="SessionID" type="hidden" value="<#PARAM name="SessionID">" />
+                        <input id="SearchCriteria" name="SearchCriteria" type="text" title="Search criteria" class="f-criteria" />
+                        <input type="submit" name="SubmitButton" value="Search" title="Search" class="f-submit" />
+                        <fieldset id="searchType" role="radiogroup">
+                            <span id="limit-search">Limit search to:</span><br />
+                            <input name="SearchType" type="radio" id="SearchTypeActive" value="Active" checked class="f-searchType" aria-labelledby="limit-search search-type-active-label"/><label for="SearchTypeActive" id="search-type-active-label">Active Request</label>
+                            <input name="SearchType" type="radio" id="SearchTypeAll" value="All" class="f-searchType" aria-labelledby="limit-search search-type-all-label" /><label for="SearchTypeAll" id="search-type-all-label">All Requests</label>
+                        </fieldset>
+                    </form>
+                </div>
+            </li>
+
+            <li><h3><div id="alerts-title">Alerts</div></h3></li>
+            <div id="alerts"><#ALERTS /></div>
+            <li><a href="https://answers.library.depaul.edu/search/?+=0&adr=1&topics=Interlibrary%20Loan">Interlibrary Loan FAQs</a></li>
+        </ul>
+    </div>
+</div>

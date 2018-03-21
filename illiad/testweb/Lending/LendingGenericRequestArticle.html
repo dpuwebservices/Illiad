@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+<title>ILLiad - Article Request</title>
+<#INCLUDE filename="include_head.html" />
+</head>
+<body>
+<div id="wrap">
+  <#INCLUDE filename="include_header_request.html">
+  <div id="content-wrap">
+	  <#INCLUDE filename="include_menu.html">
+	  <div id="content">
+		  <h1>Article Request</h1>
+		  <div id="status-request"><#STATUS/></div>
+		  <div class="req"><b>*</b> Indicates required field</div>
+		  <form action="illiadlending.dll" method="post" name="LendingGenericRequestArticle" class="f-wrap-request">
+			  <input type="hidden" name="ILLiadForm" value="LendingGenericRequestArticle">
+			  <input type="hidden" name="Username" value="<#PARAM name="Username">">
+			  <input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
+			  <input type="hidden" name="RequestType" id="RequestType" value="Article">
+			  <fieldset>
+				  <h3 class="request-subheading">Item Information</h3>
+
+						<label for="PhotoArticleTitle">
+							<span class="field">
+								<span class="req">*</span>
+								<span class="<#ERROR name="ERRORPhotoArticleTitle">"><b>Article Title</b></span>
+							</span>
+							<textarea id="PhotoArticleTitle" name="PhotoArticleTitle" rows="2" cols="40" class="f-name"><#PARAM name="PhotoArticleTitle"></textarea><br />
+						</label>
+				
+						<label for="PhotoArticleAuthor">
+							<span class="field">
+								<span class="<#ERROR name="ERRORPhotoArticleAuthor">"><b>Article Author</b></span>
+							</span>
+							<input id="PhotoArticleAuthor" name="PhotoArticleAuthor" type="text" size="40" class="f-name" value="<#PARAM name="PhotoArticleAuthor">"><br />
+						</label>
+
+						<label for="PhotoJournalTitle">
+							<span class="field">
+								<span class="req">*</span>
+								<span class="<#ERROR name="ERRORPhotoJournalTitle">"><b>Journal Title</b></span><br />
+							</span>
+							<textarea id="PhotoJournalTitle" name="PhotoJournalTitle" rows="2" cols="40" class="f-name"><#PARAM name="PhotoJournalTitle"></textarea><br />
+						</label>
+
+						<label for="PhotoJournalVolume">
+							<span class="field">
+								<span class="<#ERROR name="ERRORPhotoJournalVolume">"><b>Volume</b></span>
+							</span>
+							<input id="PhotoJournalVolume" name="PhotoJournalVolume" type="text" size="40" class="f-name" value="<#PARAM name="PhotoJournalVolume">"><br />
+						</label>
+
+						<label for="PhotoJournalIssue">
+							<span class="field">
+								<span class="<#ERROR name="ERRORPhotoJournalIssue">"><b>Issue Number or Designation</b></span>
+							</span>
+							<input id="PhotoJournalIssue" name="PhotoJournalIssue" type="text" size="40" class="f-name" value="<#PARAM name="PhotoJournalIssue">"><br />
+						</label>
+
+						<label for="PhotoJournalMonth">
+							<span class="field">
+								<span class="<#ERROR name="ERRORPhotoJournalMonth">"><b>Month</b></span>
+							</span>
+							<input id="PhotoJournalMonth" name="PhotoJournalMonth" type="text" size="40" class="f-name" value="<#PARAM name="PhotoJournalMonth">"><br />
+						</label>
+
+						<label for="PhotoJournalYear">
+							<span class="field">
+									<span class="req">*</span>
+								<span class="<#ERROR name="ERRORPhotoJournalYear">"><b>Year</b></span>
+							</span>
+							<input id="PhotoJournalYear" name="PhotoJournalYear" type="text" size="40" class="f-name" value="<#PARAM name="PhotoJournalYear">"><br />
+						</label>
+
+						<label for="PhotoJournalInclusivePages">
+							<span class="field">
+								<span class="req">*</span>
+								<span class="<#ERROR name="ERRORPhotoJournalInclusivePages">"><b>Inclusive Pages</b></span>
+							</span>
+							<input id="PhotoJournalInclusivePages" name="PhotoJournalInclusivePages" type="text" size="40" class="f-name" value="<#PARAM name="PhotoJournalInclusivePages">"><br />
+						</label>
+
+						<label for="ISSN">
+							<span class="field">
+								<span class="<#ERROR name="ERRORISSN">"><b>ISSN/ISBN (International Standard Serial/Book Number)</b></span><br />
+							</span>
+							<input id="ISSN" name="ISSN" type="text" size="20" class="f-name" value="<#PARAM name="ISSN">"><br />
+						</label>
+
+						<label for="CallNumber">
+							<span class="field">
+								<span class="<#ERROR name="ERRORCallNumber">"><b>Call Number</b></span>
+							</span>
+							<input id="CallNumber" name="CallNumber" type="text" size="20" class="f-name" value="<#PARAM name="CallNumber">"><br />
+						</label>
+
+						<label for="Notes">
+							<span class="field">
+								<span class="<#ERROR name="ERRORNotes">"><b>Notes</b></span><br />
+								<span class="note">Put any information here that may help us find the item, as well as any other pertinent information.</span>
+							</span>
+							<textarea id="Notes" name="Notes" rows="2" cols="40" class="f-name"><#PARAM name="Notes"></textarea><br />
+						</label>
+
+						<#INCLUDE filename="include_request_buttons.html">
+					</fieldset>
+			</form>
+					<#INCLUDE filename="include_footer.html">
+			</div>
+  </div>
+</div>
+</body>
+</html>

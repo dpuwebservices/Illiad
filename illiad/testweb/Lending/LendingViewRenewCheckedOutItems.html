@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+<title>Checked Out Items</title>
+<#INCLUDE filename="include_head.html" />
+<body>
+<div id="wrap">
+	<#INCLUDE filename="include_header.html">
+  	<div id="content-wrap">
+  		<#INCLUDE filename="include_menu.html">
+    	<div id="content">
+			<div class="default-table">
+				<#TABLE name="ViewShippedItems" headerText="Shipped Items" noDataAction="ShowMessageRow" noDataMessage="No Items">
+			</div>
+      		<#INCLUDE filename="include_footer.html">
+    	</div>
+  	</div>
+</div>
+</body>
+</html>

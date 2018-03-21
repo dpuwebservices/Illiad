@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <title>Electronic Delivery Undelete</title>
+    <#INCLUDE filename="include_head.html" />
+</head>
+
+<body>
+
+    <div id="wrap">
+    <#INCLUDE filename="include_header.html" />
+
+        <div id="content-wrap">
+        <#INCLUDE filename="include_menu.html" />
+
+            <div id="content">
+
+                <div class="default-table">
+                    <#TABLE name="ElectronicDeliveryUndelete" headerText="Deleted Electronically Received Articles" noDataAction="ShowMessageRow" noDataMessage="No Articles" /><br />
+                </div>
+
+                <p>In the event that you accidentally deleted an article and it no longer appears here, email us at <#LOCALINFO field="GeneralEMailAddress"/>.</p>
+
+                <#INCLUDE filename="include_footer.html" />
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

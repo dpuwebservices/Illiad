@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+<meta http-equiv="Pragma" content="no-cache">
+<title>ILLiad Logon</title>
+<#INCLUDE filename="include_head.html" />
+</head>
+<body id="type-b">
+<div id="wrap">
+		<div id="header">
+				<div id="header-content">
+					<div id="header-logo"><a href="lendinglogon.html"><img src="css/images/DePaul-header-logo.png" alt="DePaul University Logo" /></a></div>
+				</div>
+		</div>
+  <div id="content-wrap">
+		<div id="content">
+			<div id="status-request"><#STATUS></div>
+			<h1>ILLiad Logon</h1>
+		<form action="<#DLL>" method="post" name="LendingLogon" class="f-wrap-1">
+			<input type="hidden" name="ILLiadForm" value="LendingLogon">
+			<div id="logonform">
+				<div class="req"><b>*</b> Indicates required field</div>
+				<fieldset>
+					<label for="username">
+						<span class="field">
+							<span class="req">*</span>
+							<b>Username</b>
+						</span>
+						<input id="username" name="Username" type="text" class="f-name" /><br />
+					</label>
+					<label for="password">
+						<span class="field">
+							<span class="req">*</span>
+							<b>Password</b>
+						</span>
+						<input id="password" name="Password" type="password" class="f-name" /><br />
+					</label>
+
+					<div class="f-submit-wrap">
+						<input type="submit" name="SubmitButton" value="Logon to ILLiad" class="f-submit" /><br />
+					</div>
+				</fieldset>
+			</div>
+		</form>
+
+		<a href="illiadlending.dll?Action=10&Form=84">Forgot Password?</a><br />
+		<a href="LendingFirstTime.html">First Time Users</a>
+		<#INCLUDE filename="include_footer.html">
+    </div>
+  </div>
+</div>
+</body>
+</html>

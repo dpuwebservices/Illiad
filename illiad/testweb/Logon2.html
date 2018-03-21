@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Interlibrary Loan Logon</title>
+    <#INCLUDE filename="include_head.html" />
+</head>
+
+<body id="type-b">
+
+    <div id="wrap">
+        <#INCLUDE filename="include_header_unauth.html" />
+
+        <div id="content-wrap">
+        <div id="status-request"><#STATUS/></div>
+
+            <div id="content">
+
+                <form action="<#DLL />" method="post" name="Logon" class="f-wrap-1">
+                <#FORMSTATE />
+                    <input type="hidden" name="ILLiadForm" value="Logon">
+
+                    <div id="logonform">
+
+                    <fieldset>
+
+                        <h3>Interlibrary Loan Logon</h3>
+
+                        <label for="username">
+                            <span class="field">
+                                <strong>Library Borrower ID</strong>
+                                <br>
+                                <a class="note logonLink" href="https://answers.library.depaul.edu/faq/161853">What's my library borrower ID?</a>
+                            </span>
+<!--                            <input id="username" name="Username" type="password" class="f-name" onkeypress="$(this).val($(this).val().toUpperCase());" /><br />-->
+                            <input id="username" name="Username" type="password" class="f-name" /><br />
+                        </label>
+
+                        <label for="password">
+                            <span class="field">
+                                <strong>Last Name</strong>
+                                <br>
+                                <span class="note">Use CAPS please</span>
+                            </span>
+                            <input id="password" name="Password" type="password" class="f-name" /><br />
+                        </label>
+
+                        <div class="f-submit-wrap">
+                            <input type="submit" name="SubmitButton" value="Logon to ILLiad" class="f-submit" /><br />
+                        </div>
+                    </fieldset>
+
+                    </div>
+                </form>
+                <form action="illiad.dll?Action=10&Form=79" method="post" name="RegisterForm" id="RegisterForm">
+                <#FORMSTATE />
+                      <a class="logonLink" href="illiad.dll?Action=10&Form=79">First Time Users - Click here</a><br/><br/>
+                      <a class="logonLink" href="illiad.dll?Action=10&Form=84">Forgot Password?</a>
+                      <br><br>
+                      <a class="logonLink" href="https://law.depaul.edu/library/research/interlibrary-loan/Pages/default.aspx">Rinn Law Library patrons please click here</a>
+                      <br><br>
+                      <a class="logonLink" href="https://library.depaul.edu/get-help/ask-a-librarian/Pages/default.aspx">Trouble logging on? Ask a librarian</a>
+                      <br><br>
+                </form>
+
+            <#INCLUDE filename="include_footer.html" />
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

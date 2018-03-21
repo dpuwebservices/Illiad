@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <title>Electronic Delivery</title>
+    <#INCLUDE filename="include_head.html" />
+</head>
+
+<body>
+
+    <div id="wrap">
+    <#INCLUDE filename="include_header.html" />
+
+        <div id="content-wrap">
+        <#INCLUDE filename="include_menu.html" />
+
+            <div id="content">
+
+                <div class="default-table">
+                    <#TABLE name="ElectronicDelivery" headerText="Articles/Book Chapters" column="TransactionNumber:Transaction" column="View" column="Size" column="Title" column="Author" column="Expires" noDataAction="ShowMessageRow" noDataMessage="No Articles" /><br />
+                </div>
+
+                <strong>Articles posted to this page will remain accessible until the expiration date.</strong>
+
+            <#INCLUDE filename="include_footer.html" />
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
