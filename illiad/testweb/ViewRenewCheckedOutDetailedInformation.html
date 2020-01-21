@@ -10,7 +10,11 @@
     <#INCLUDE filename="include_header.html" />
 
         <div id="content-wrap">
-        <#INCLUDE filename="include_menu.html" />
+                <div id="grid">
+                        <div class="col-3-12">
+                            <#INCLUDE filename="include_menu.html" />
+                        </div>
+                        <div class="col-7-12">
 
             <div id="content">
             <#MENU name="transaction" separator="|" />
@@ -27,6 +31,14 @@
 
             </div>
         </div>
+    </div>
+    <div class="col-2-12">
+            <div id="sidebar">
+                    <h3><div id="alerts-title">Alerts</div></h3>
+                    <div id="alerts"><#ALERTS /></div>
+                    <a href="https://answers.library.depaul.edu/search/?+=0&adr=1&topics=Interlibrary%20Loan" target="_blank">Interlibrary Loan FAQs</a>
+            </div>
+    </div>
     </div>
 </body>
 </html>

@@ -2,9 +2,22 @@
     <div id="header-content">
         <div id="header-logo"><a href="<#ACTION action="10" form="10">"><img src="css/images/DePaul-header-logo.png" alt="DePaul University Logo" /></a></div>
    </div>
+   <div id="search">
+        <form class="form-wrapper" action="illiadlending.dll" name="Search" method="post">
+                <input type="hidden" name="IlliadForm" value="Search" />
+                <input id="SessionID" name="SessionID" type="hidden" value="<#PARAM name="SessionID">" />
+                <input id="SearchCriteria" name="SearchCriteria" type="text" title="Search criteria" class="f-criteria" />
+                <input type="submit" name="SubmitButton" value="Search" title="Search" class="f-submit" />
+                <fieldset id="searchType" role="radiogroup">
+                        <span id="limit-search">Limit search to:</span><br />
+                        <input name="SearchType" type="radio" id="SearchTypeActive" value="Active" checked class="f-searchType" aria-labelledby="limit-search search-type-active-label"/><label for="SearchTypeActive" id="search-type-active-label">Active Request</label>
+                        <input name="SearchType" type="radio" id="SearchTypeAll" value="All" class="f-searchType" aria-labelledby="limit-search search-type-all-label" /><label for="SearchTypeAll" id="search-type-all-label">All Requests</label>
+                </fieldset>
+        </form>
+</div>
 
 </div>
 <ul class="breadcrumb">
-    <li><a href="#">Institution's Library Home</a></li>
+    <li><a href="https://library.depaul.edu/Pages/default.aspx" target="_blank">DePaul's Library Home</a></li>
     <li><a href="<#ACTION action="10" form="10">">ILLiad Main Menu</a></li>
 </ul>

@@ -1,0 +1,137 @@
+<html lang="en">
+<head>
+    <title>Personal Information</title>
+    <#INCLUDE filename="include_head.html" />
+    <script type="text/javascript" src="js/userNotificationPreferences.js"></script>
+
+</head>
+
+<body>
+    <div id="wrap">
+    <#INCLUDE filename="include_header_request.html" />
+
+        <div id="content-wrap">
+                <div id="grid">
+                        <div class="col-3-12">
+                                <#INCLUDE filename="include_menu.html" />
+                        </div>
+                        <div class="col-7-12">
+
+            <div id="content">
+
+                <h1>Personal Information</h1>
+                <div id="status-request"><#STATUS/></div>
+
+                <form action="illiad.dll" method="post" name="ChangeUserInformation" class="f-wrap-request">
+                <input type="hidden" name="ILLiadForm" value="ChangeUserInformation">
+                <input type="hidden" name="Username" value="<#PARAM name="Username">">
+                <input type="hidden" name="SessionID" value="<#PARAM name="SessionID">">
+                <input type="hidden" name="NotifyGroup" value="Electronic">
+                <input type="hidden" name="DeliveryGroup" value="Hold for Pickup">
+                <input type="hidden" name="LoanDeliveryGroup" value="Hold for Pickup">
+                <input type="hidden" name="WebDeliveryGroup" value="Yes">
+                <input type="hidden" id="BillingCategory" name="BillingCategory" value="<#PARAM name="BillingCategory">">
+                <input type="hidden" id="SSN" name="SSN" value="<#PARAM name="SSN">">
+						<input type="hidden" name="StatusGroup" value="<#PARAM name="StatusGroup">">
+
+                <#FORMSTATE>
+                <fieldset>
+                        <label for="FirstName">
+                            <span class="field">
+                                <span class="req">*</span>
+                                <span class="<#ERROR name="ERRORFirstName">"><b>First Name</b></span>
+                            </span>
+                            <input id="FirstName" name="FirstName" type="text" size="40" class="f-name" value="<#PARAM name="FirstName">"><br />
+                        </label>
+
+                        <label for="LastName">
+                            <span class="field">
+                                <span class="req">*</span>
+                                <span class="<#ERROR name="ERRORLastName">"><b>Last Name</b></span>
+                            </span>
+                            <input id="LastName" name="LastName" type="text" size="40" class="f-name" value="<#PARAM name="LastName">"><br />
+                        </label>
+
+                        <label for="EMailAddress">
+                            <span class="field">
+                                <span class="req">*</span>
+                                <span class="<#ERROR name="ERROREMailAddress">"><b>E-Mail Address</b></span>
+                            </span>
+                            <input id="EMailAddress" name="EMailAddress" type="text" size="40" class="f-name" value="<#PARAM name="EMailAddress">"><br />
+                        </label>
+
+                        
+                        <label for="NVTGC">
+                            <span class="field">
+                                <span class="req">*</span>
+                                <span class="<#ERROR name="ERRORNVTGC">"><b>Delivery Location</b></span>
+                            </span>
+                            <select id="NVTGC" name="NVTGC" size="1" class="f-name">
+                                <#OPTION name="custom" groupname="NVTGC" selectedValue="<#PARAM name=NVTGC>" />
+                            </select><br />
+                        </label>
+                        
+                        <label for="Address">
+                            <span class="field">
+                                <span class="req">*</span>
+                                <span class="<#ERROR name="ERRORAddress">"><b>Address Line 1</b></span>
+                            </span>
+                            <input id="Address" name="Address" type="text" size="40" class="f-name" value="<#PARAM name="Address">"><br />
+                        </label>
+
+                        <label for="Address2">
+                            <span class="field">
+                                <span class="<#ERROR name="ERRORAddress2">"><b>Address Line 2</b></span>
+                            </span>
+                            <input id="Address2" name="Address2" type="text" size="40" class="f-name" value="<#PARAM name="Address2">"><br />
+                        </label>
+
+                        <label for="City">
+                            <span class="field">
+                                <span class="req">*</span>
+                                <span class="<#ERROR name="ERRORCity">"><b>City</b></span>
+                            </span>
+                            <input id="City" name="City" type="text" size="40" class="f-name" value="<#PARAM name="City">"><br />
+                        </label>
+
+                        <label for="State">
+                            <span class="field">
+                                <span class="req">*</span>
+                                <span class="<#ERROR name="ERRORState">"><b>State</b></span>
+                            </span>
+                            <select id="State" name="State" size="1" class="f-name">
+                                <#OPTION name="custom" groupname="State" selectedValue="<#PARAM name=State>" />
+                            </select><br />
+                        </label>
+
+                        <label for="Zip">
+                            <span class="field">
+                                <span class="req">*</span>
+                                <span class="<#ERROR name="ERRORZip">"><b>Zip</b></span>
+                            </span>
+                            <input id="Zip" name="Zip" type="text" size="40" class="f-name" value="<#PARAM name="Zip">"><br />
+                        </label>
+
+                        <div class="f-submit-wrap" align="right">
+                            <input type="submit" name="SubmitButton" value="Submit Information" class="f-submit" />
+                            <input type="submit" name="SubmitButton" value="Cancel - Exit to Main Menu" class="f-submit" />
+                        </div>
+                    </fieldset>
+
+                </form>
+
+                <#INCLUDE filename="include_footer.html" />
+
+            </div>
+        </div>
+        <div class="col-2-12">
+                <div id="sidebar">
+                        <h3><div id="alerts-title">Alerts</div></h3>
+                        <div id="alerts"><#ALERTS /></div>
+                        <a href="https://answers.library.depaul.edu/search/?+=0&adr=1&topics=Interlibrary%20Loan" target="_blank">Interlibrary Loan FAQs</a>
+                </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

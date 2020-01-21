@@ -7,7 +7,11 @@
 		<div id="wrap">
 			<#INCLUDE filename="include_header_request.html">
 			<div id="content-wrap">
-				<#INCLUDE filename="include_menu.html">
+					<div id="grid">
+							<div class="col-3-12">
+								<#INCLUDE filename="include_menu.html" />
+							</div>
+							<div class="col-7-12">
 				<div id="content">
 					<h1>Edit Book Chapter Request</h1>
 					<div id="status-request"><#STATUS></div>
@@ -74,7 +78,7 @@
 									<label for="ISSN">
 											<span class="field">
 													<span class="<#ERROR name="ERRORISSN">"><b>ISSN/ISBN (International Standard Serial/Book Number)</b></span><br />
-													<span class="note">If given will speed request processing</span>
+													<span class="note">Optional, can speed request processing</span>
 											</span>
 											<input id="ISSN" name="ISSN" type="text" size="20" class="f-name" value="<#PARAM name="ISSN">"><br />
 									</label>
@@ -93,8 +97,6 @@
 											<input id="PhotoArticleTitle" name="PhotoArticleTitle" rows="2" cols="40" class="f-name" value="<#PARAM name="PhotoArticleTitle">"><br />
 									</label>
 
-									<h3 class="request-subheading">Preferences</h3>
-
 									<label for="NotWantedAfter">
 											<span class="field">
 													<span class="req">*</span>
@@ -102,18 +104,6 @@
 													<span class="note">(MM/DD/YYYY)</span>
 											</span>
 											<input id="NotWantedAfter" name="NotWantedAfter" type="text" size="40" class="f-name" value="<#PARAM name="NotWantedAfter">"><br />
-									</label>
-
-									<label for="AcceptNonEnglish">
-											<span class="field">
-													<span class="<#ERROR name="ERRORAcceptNonEnglish">"><b>Will you accept the item in a language other than English?</b></span><br />
-													<span class="note">If yes, specify acceptable languages in the notes field.</span>
-											</span>
-											<select id="AcceptNonEnglish" name="AcceptNonEnglish" size="1" class="f-name">
-													<option selected><#PARAM name="AcceptNonEnglish"></option>
-													<option>No</option>
-													<option>Yes</option>
-											</select><br />
 									</label>
 
 									<label for="Notes">
@@ -128,6 +118,14 @@
 				</form>
 				<#INCLUDE filename="include_footer.html">
 				</div>
+			</div>
+			<div class="col-2-12">
+					<div id="sidebar">
+							<h3><div id="alerts-title">Alerts</div></h3>
+							<div id="alerts"><#ALERTS /></div>
+							<a href="https://answers.library.depaul.edu/search/?+=0&adr=1&topics=Interlibrary%20Loan" target="_blank">Interlibrary Loan FAQs</a>
+					</div>
+			</div>
 			</div>
 		</div>
 		</body>

@@ -22,6 +22,13 @@
                     <#FORMSTATE />
                     <input type="hidden" name="ILLiadForm" value="NewAuthRegistration">
                     <input type="hidden" id="BillingCategory" name="BillingCategory" value="<#PARAM name="BillingCategory">">
+                    <label for="SSN">
+    <span class="field">
+        <span class="req">*</span>
+        <span class="<#ERROR name="ERRORSSN">"><b>ID Number</b></span>
+    </span>
+    <input id="SSN" name="SSN" type="text" size="40" class="f-name" value="<#PARAM name="SSN">"><br />
+
                     <input type="hidden" name="NotifyGroup" value="Electronic">
                     <input type="hidden" name="DeliveryGroup" value="Hold for Pickup">
                     <input type="hidden" name="LoanDeliveryGroup" value="Hold for Pickup">
@@ -48,14 +55,6 @@
                                     <span class="<#ERROR name="ERRORLastName">"><strong>Last Name</strong></span>
                                 </span>
                                 <input id="LastName" name="LastName" type="text" size="40" class="f-name" value="<#PARAM name="LastName">"><br />
-                            </label>
-
-                            <label for="SSN">
-                                <span class="field">
-                                    <span class="req">*</span>
-                                    <span class="<#ERROR name="ERRORSSN">"><strong>ID Number</strong></span>
-                                </span>
-                                <input id="SSN" name="SSN" type="text" size="40" class="f-name" value="<#PARAM name="SSN">"><br />
                             </label>
 
                             <label for="EMailAddress">

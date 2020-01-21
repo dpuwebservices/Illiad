@@ -11,7 +11,11 @@
     <#INCLUDE filename="include_header_request.html" />
 
         <div id="content-wrap">
-        <#INCLUDE filename="include_menu.html" />
+                <div id="grid">
+                        <div class="col-3-12">
+                                <#INCLUDE filename="include_menu.html" />
+                        </div>
+                        <div class="col-7-12">
 
             <div id="content">
 
@@ -27,6 +31,7 @@
                 <input type="hidden" name="LoanDeliveryGroup" value="Hold for Pickup">
                 <input type="hidden" name="WebDeliveryGroup" value="Yes">
                 <input type="hidden" id="BillingCategory" name="BillingCategory" value="<#PARAM name="BillingCategory">">
+                <input type="hidden" id="SSN" name="SSN" value="<#PARAM name="SSN">">
 
                 <#FORMSTATE>
                 <fieldset>
@@ -44,14 +49,6 @@
                                 <span class="<#ERROR name="ERRORLastName">"><b>Last Name</b></span>
                             </span>
                             <input id="LastName" name="LastName" type="text" size="40" class="f-name" value="<#PARAM name="LastName">"><br />
-                        </label>
-
-                        <label for="SSN">
-                            <span class="field">
-                                <span class="req">*</span>
-                                <span class="<#ERROR name="ERRORSSN">"><strong>ID Number</strong></span>
-                            </span>
-                            <input id="SSN" name="SSN" type="text" size="40" class="f-name" value="<#PARAM name="SSN">"><br />
                         </label>
 
                         <label for="EMailAddress">
@@ -124,6 +121,14 @@
                 <#INCLUDE filename="include_footer.html" />
 
             </div>
+        </div>
+        <div class="col-2-12">
+                <div id="sidebar">
+                        <h3><div id="alerts-title">Alerts</div></h3>
+                        <div id="alerts"><#ALERTS /></div>
+                        <a href="https://answers.library.depaul.edu/search/?+=0&adr=1&topics=Interlibrary%20Loan" target="_blank">Interlibrary Loan FAQs</a>
+                </div>
+        </div>
         </div>
     </div>
 </body>

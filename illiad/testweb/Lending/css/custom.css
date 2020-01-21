@@ -38,21 +38,21 @@ a.logonLink:hover {
   color: #2972bb;
   border-bottom: 1px solid #2972bb;
 }
-#nav ul li h3 {
-  border-bottom-color: #d1d1d1;
+#nav ul li h3, #sidebar h3 {
+  border-bottom: #d1d1d1 dotted 1px;
 }
 
-#nav ul li h3 a, #nav ul li h3 {
-  color: #1d4267;
-  font-size: 16px;
-}
-
-#nav ul ul li, #nav ul ul li a {
+#nav ul ul li, #nav ul ul li a, #sidebar a {
   font-size: 14px;
   color: #1d4267;
 }
 
-#nav ul li h3 a:hover, #nav ul ul li:hover, #nav ul ul li a:hover {
+#nav ul li h3 a, #nav ul li h3, #sidebar h3 {
+  color: #1d4267;
+  font-size: 16px;
+}
+
+#nav ul li h3 a:hover, #nav ul ul li:hover, #nav ul ul li a:hover, #sidebar a:hover {
   text-decoration: underline;
   color: #2972bb;
 }
@@ -102,4 +102,31 @@ input.f-submit:hover {
 
 form.f-wrap-1 label .field {
   width: 12em;
+}
+
+#grid #utility {
+  width: auto;
+}
+
+#grid #content {
+  margin: 0px;
+}
+
+form.f-wrap-request {
+  width: auto;
+}
+
+#alerts {
+  background-color: #EFEFEF;
+}
+
+#search {
+  position: absolute;
+  top: 0px;
+  right: 25px;
+}
+
+fieldset#searchType {
+  margin: 0px;
+  padding: 0px;
 }
