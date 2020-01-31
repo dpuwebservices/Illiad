@@ -32,6 +32,7 @@
                 <input type="hidden" name="WebDeliveryGroup" value="Yes">
                 <input type="hidden" id="BillingCategory" name="BillingCategory" value="<#PARAM name="BillingCategory">">
                 <input type="hidden" id="SSN" name="SSN" value="<#PARAM name="SSN">">
+						<input type="hidden" name="StatusGroup" value="<#PARAM name="StatusGroup">">
 
                 <#FORMSTATE>
                 <fieldset>
@@ -59,27 +60,28 @@
                             <input id="EMailAddress" name="EMailAddress" type="text" size="40" class="f-name" value="<#PARAM name="EMailAddress">"><br />
                         </label>
 
+                        
                         <label for="NVTGC">
                             <span class="field">
                                 <span class="req">*</span>
                                 <span class="<#ERROR name="ERRORNVTGC">"><b>Delivery Location</b></span>
                             </span>
                             <select id="NVTGC" name="NVTGC" size="1" class="f-name">
-                                <#OPTION name="custom" groupname="NVTGC" selectedValue="<#PARAM name="NVTGC">"/>
+                                <#OPTION name="custom" groupname="NVTGC" selectedValue="<#PARAM name=NVTGC>" />
                             </select><br />
                         </label>
                         
                         <label for="Address">
                             <span class="field">
                                 <span class="req">*</span>
-                                <span class="<#ERROR name="ERRORAddress">"><b>Primary Address Line 1</b></span>
+                                <span class="<#ERROR name="ERRORAddress">"><b>Address Line 1</b></span>
                             </span>
                             <input id="Address" name="Address" type="text" size="40" class="f-name" value="<#PARAM name="Address">"><br />
                         </label>
 
                         <label for="Address2">
                             <span class="field">
-                                <span class="<#ERROR name="ERRORAddress2">"><b>Primary Address Line 2</b></span>
+                                <span class="<#ERROR name="ERRORAddress2">"><b>Address Line 2</b></span>
                             </span>
                             <input id="Address2" name="Address2" type="text" size="40" class="f-name" value="<#PARAM name="Address2">"><br />
                         </label>
@@ -87,7 +89,7 @@
                         <label for="City">
                             <span class="field">
                                 <span class="req">*</span>
-                                <span class="<#ERROR name="ERRORCity">"><b>Primary Address City</b></span>
+                                <span class="<#ERROR name="ERRORCity">"><b>City</b></span>
                             </span>
                             <input id="City" name="City" type="text" size="40" class="f-name" value="<#PARAM name="City">"><br />
                         </label>
@@ -95,7 +97,7 @@
                         <label for="State">
                             <span class="field">
                                 <span class="req">*</span>
-                                <span class="<#ERROR name="ERRORState">"><b>Primary Address State</b></span>
+                                <span class="<#ERROR name="ERRORState">"><b>State</b></span>
                             </span>
                             <select id="State" name="State" size="1" class="f-name">
                                 <#OPTION name="custom" groupname="State" selectedValue="<#PARAM name=State>" />
@@ -105,7 +107,7 @@
                         <label for="Zip">
                             <span class="field">
                                 <span class="req">*</span>
-                                <span class="<#ERROR name="ERRORZip">"><b>Primary Address Zip</b></span>
+                                <span class="<#ERROR name="ERRORZip">"><b>Zip</b></span>
                             </span>
                             <input id="Zip" name="Zip" type="text" size="40" class="f-name" value="<#PARAM name="Zip">"><br />
                         </label>

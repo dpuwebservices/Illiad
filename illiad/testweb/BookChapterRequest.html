@@ -37,7 +37,23 @@
                                     <input id="PhotoItemAuthor" name="PhotoItemAuthor" type="text" size="40" class="f-name" value="<#PARAM name="PhotoItemAuthor">"><br />
                                 </label>
 
-                                <label for="PhotoItemPlace">
+
+                                <label for="PhotoArticleTitle">
+                                    <span class="field">
+									 <span class="req">*</span>
+                                        <span class="<#ERROR name="ERRORPhotoArticleTitle">"><b>Chapter Title</b></span>
+                                    </span>
+                                    <input id="PhotoArticleTitle" name="PhotoArticleTitle" rows="2" cols="40" class="f-name" value="<#PARAM name="PhotoArticleTitle">"><br />
+                                </label>
+								
+								                               <label for="PhotoArticleAuthor">
+                                    <span class="field">
+                                        <span class="<#ERROR name="ERRORPhotoArticleAuthor">"><b>Chapter Author</b></span>
+                                    </span>
+                                    <input id="PhotoArticleAuthor" name="PhotoArticleAuthor" type="text" size="40" class="f-name" value="<#PARAM name="PhotoArticleAuthor">"><br />
+                                </label>
+
+								<label for="PhotoItemPlace">
                                     <span class="field">
                                         <span class="<#ERROR name="ERRORPhotoItemPlace">"><b>Place of Publication</b></span>
                                     </span>
@@ -82,20 +98,7 @@
                                     <input id="ISSN" name="ISSN" type="text" size="20" class="f-name" value="<#PARAM name="ISSN">"><br />
                                 </label>
 
-                                <label for="PhotoArticleAuthor">
-                                    <span class="field">
-                                        <span class="<#ERROR name="ERRORPhotoArticleAuthor">"><b>Chapter Author</b></span>
-                                    </span>
-                                    <input id="PhotoArticleAuthor" name="PhotoArticleAuthor" type="text" size="40" class="f-name" value="<#PARAM name="PhotoArticleAuthor">"><br />
-                                </label>
-
-                                <label for="PhotoArticleTitle">
-                                    <span class="field">
-                                        <span class="<#ERROR name="ERRORPhotoArticleTitle">"><b>Chapter Title</b></span>
-                                    </span>
-                                    <input id="PhotoArticleTitle" name="PhotoArticleTitle" rows="2" cols="40" class="f-name" value="<#PARAM name="PhotoArticleTitle">"><br />
-                                </label>
-
+                                
                                 <label for="NotWantedAfter">
                                     <span class="field">
                                         <span class="req">*</span>

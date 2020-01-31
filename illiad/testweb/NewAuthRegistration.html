@@ -22,19 +22,12 @@
                     <#FORMSTATE />
                     <input type="hidden" name="ILLiadForm" value="NewAuthRegistration">
                     <input type="hidden" id="BillingCategory" name="BillingCategory" value="<#PARAM name="BillingCategory">">
-                    <label for="SSN">
-    <span class="field">
-        <span class="req">*</span>
-        <span class="<#ERROR name="ERRORSSN">"><b>ID Number</b></span>
-    </span>
-    <input id="SSN" name="SSN" type="text" size="40" class="f-name" value="<#PARAM name="SSN">"><br />
-
+                    <input type="hidden" id="SSN" name="SSN" value="<#PARAM name="SSN">">
                     <input type="hidden" name="NotifyGroup" value="Electronic">
                     <input type="hidden" name="DeliveryGroup" value="Hold for Pickup">
                     <input type="hidden" name="LoanDeliveryGroup" value="Hold for Pickup">
                     <input type="hidden" name="WebDeliveryGroup" value="Yes">
-					<input type="hidden" name="NVTGC" value="ILL">
-					<input type="hidden" name="Status" value="Patron">
+					<input type="hidden" name="StatusGroup" value="<#PARAM name="StatusGroup">">
 
 
                         <fieldset>
@@ -65,15 +58,17 @@
                                 <input readonly id="EMailAddress" name="EMailAddress" type="text" size="40" class="f-name" value="<#PARAM name="EMailAddress">"><br />
                             </label>
 
-                            <label for="NVTGC">
-                                <span class="field">
-                                    <span class="req">*</span>
-                                    <span class="<#ERROR name="ERRORNVTGC">"><b>Delivery Location</b></span>
-                                </span>
-                                <select id="NVTGC" name="NVTGC" size="1" class="f-name">
-                                    <#OPTION name="custom" groupname="NVTGC" selectedValue="<#PARAM name="NVTGC">"/>
+                           <label for="NVTGC">
+                            <span class="field">
+                                <span class="req">*</span>
+                                <span class="<#ERROR name="ERRORNVTGC">"><b>Delivery Location</b></span>
+                            </span>
+							<select id="NVTGC" name="NVTGC" size="1" class="f-name">
+                            <option value="LPC" selected>Lincoln Park</option>
+                                    <option value = "LOOP">Loop</option>
+                                    <option value= "DL">Distance Learner</option>
                                 </select><br />
-                            </label>
+                        </label>
 
                             <label for="Address">
                                 <span class="field">

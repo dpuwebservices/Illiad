@@ -17,13 +17,13 @@
             <div id="content">
 
                 <form action="<#DLL />" method="post" name="Logon" class="f-wrap-1">
-                <#FORMSTATE />
+
                 <input type="hidden" name="ILLiadForm" value="Logon">
 
                 <div id="logonform">
 
                     <fieldset>
-                        <h3><span style="color:red">TEST ENVIRONMENT: </span>Interlibrary Loan Logon</h3>
+                        <h3>Interlibrary Loan Logon</h3>
 
                     <label class="logon-label" for="username">
                         <span class="field">
@@ -35,8 +35,7 @@
 
                     <label class="logon-label" for="password">
                         <span class="field">
-                            <strong>Last Name</strong><br />
-                            <span class="note">Use CAPS please</span>
+                                <strong>Password*</strong>
                         </span>
                         <input id="password" name="Password" type="password" class="f-name" /><br />
                     </label>
@@ -44,13 +43,15 @@
                     <div class="f-submit-wrap">
                         <input type="submit" name="SubmitButton" value="Logon" class="f-submit" /><br />
                     </div>
-
+                        
+                       <p><strong>*</strong>If you have not set a password in the past, please log in using your last name in <u>all capital letters</u>. An upgrade to the system in January 2020 now allows for users to set their own passwords.
+                        </p>
+                        
                 </fieldset>
                 </div>
                 </form>
                 <form action="illiad.dll?Action=10&Form=79" method="post" name="RegisterForm" id="RegisterForm">
-                <#FORMSTATE />
-                      <br><br>
+                  <#FORMSTATE>
                       <a class="logonLink" href="https://law.depaul.edu/library/research/interlibrary-loan/Pages/default.aspx"><span class="red">Rinn Law Library</span> patrons please click here</a>
                       <br><br>
                       <a class="logonLink" href="https://library.depaul.edu/get-help/ask-a-librarian/Pages/default.aspx">Trouble logging on? Ask a librarian</a>
