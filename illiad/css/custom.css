@@ -132,3 +132,7 @@ fieldset#searchType {
   margin: 0px;
   padding: 0px;
 }
+
+#alerts .sidebar{
+  font-size: 10px;
+}
